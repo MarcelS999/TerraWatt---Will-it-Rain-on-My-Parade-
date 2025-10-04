@@ -16,20 +16,5 @@ streamlit run app.py
 🗺️ How to Use
 
 Open the map in your browser (Streamlit will show the local URL).
-
-Explore Ireland’s wind variability layer.
-
 Click any point to generate a detailed site summary — including mean wind speed, CF, and nearest grid connection.
 
-📂 Repository Structure
-├── app.py                         # Main Streamlit map app
-├── data/
-│   ├── era5/                      # ERA5 climatology & CF datasets
-│   ├── osm/                       # Transmission grid layers
-│   └── wind_farms/                # Wind farm shapefile
-├── src/
-│   ├── analysis/                  # Site summary & CF computations
-│   ├── processing/                # Wind extrapolation utilities
-│   └── visualization/             # Map rendering tools
-├── environment.yml                # Conda environment file
-└── README.md                      # This file
