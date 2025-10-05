@@ -1,0 +1,100 @@
+# ============================================================
+# TerraWatt — Will It Rain on My Parade? Detailed Requirements
+# NASA Space Apps 2025 Challenge
+# ============================================================
+
+# Core Python Packages
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+python-dateutil==2.9.0.post0
+pytz==2025.2
+
+# Geospatial Data Processing
+geopandas==1.1.1
+rasterio==1.4.3
+shapely==2.1.2
+pyproj==3.7.1
+osmnx==2.0.6
+rioxarray==0.19.0
+pyogrio==0.11.1
+
+# Web Framework & Streamlit
+streamlit==1.50.0
+streamlit-folium==0.25.3
+
+# Mapping & Visualization
+folium==0.20.0
+plotly==6.3.1
+matplotlib==3.10.6
+pydeck==0.9.1
+branca==0.8.1
+
+# Data Processing & APIs
+requests==2.32.5
+xarray==2025.6.1
+pystac-client==0.9.0
+planetary-computer==1.0.0
+python-dotenv==1.1.1
+pystac==1.14.1
+
+# File I/O & Data Formats
+openpyxl==3.1.5
+pyarrow==21.0.0
+zarr==2.18.3
+h5py>=3.0.0
+netcdf4>=1.5.0
+
+# Jupyter & Development Environment
+jupyter==1.1.1
+ipykernel==6.30.1
+ipython==8.37.0
+ipywidgets==8.1.7
+notebook==7.4.7
+jupyterlab==4.4.9
+jupyter-client==8.6.3
+jupyter-core==5.8.1
+
+# Data Science Utilities
+altair==5.5.0
+seaborn>=0.11.0
+scikit-learn>=1.0.0
+
+# Geospatial Utilities
+geopy==2.4.1
+networkx==3.4.2
+fiona>=1.8.0
+
+# Cloud & Storage
+adlfs==2025.8.0
+fsspec==2025.9.0
+azure-storage-blob==12.26.0
+azure-identity==1.25.0
+
+# HTTP & Networking
+httpx==0.28.1
+httpcore==1.0.9
+aiohttp==3.12.15
+urllib3==2.5.0
+
+# Utilities
+click==8.3.0
+tqdm>=4.60.0
+watchdog==6.0.0
+psutil==7.1.0
+packaging==25.0
+
+# Development Tools
+GitPython==3.1.45
+pywin32==311
+pywinpty==3.0.0
+
+# Optional: Machine Learning
+# scikit-learn>=1.0.0
+# tensorflow>=2.8.0
+# torch>=1.11.0
+
+# Optional: Advanced Visualization
+# bokeh>=2.4.0
+# dash>=2.0.0
+# panel>=0.13.0

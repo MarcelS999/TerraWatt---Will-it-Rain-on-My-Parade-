@@ -1,8 +1,24 @@
 # ============================================================
-# 🚀 AI-ASSISTED CODE NOTICE
-# This file was developed with assistance from OpenAI's ChatGPT (GPT-5)
-# as part of the NASA Space Apps 2025 project:
-# “TerraWatt — Will It Rain on My Parade?”
+# AI USE DECLARATION
+# ============================================================
+# This file was developed with significant assistance from AI tools:
+# 
+# 1. Cursor AI (https://cursor.sh/)
+#    - Primary development environment with AI-powered code completion
+#    - Real-time code suggestions and refactoring assistance
+#    - Integrated debugging and error resolution
+#
+# 2. ChatGPT (OpenAI - https://openai.com/chatgpt)
+#    - Conversational AI assistance for complex coding tasks
+#    - Strategic planning and architectural guidance
+#    - Code generation and debugging support
+#
+# Project: TerraWatt — Will It Rain on My Parade?
+# Challenge: NASA Space Apps 2025
+# 
+# All AI-generated code has been reviewed, tested, and validated
+# by the human development team. AI tools served as collaborative
+# partners in the development process.
 # ============================================================
 
 import streamlit as st
@@ -14,6 +30,7 @@ import json
 from shapely.geometry import Point
 from streamlit_folium import st_folium
 from src.analysis.site_summary import summarize_site
+from src.visualization.optimal_zones_viz import render_optimal_zones_map
 
 # ======================================================
 # 🌍 STREAMLIT CONFIG
@@ -58,7 +75,27 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("🇮🇪 Irish Transmission Grid & Wind Resource Map")
+# ======================================================
+# 🎯 PAGE SELECTION
+# ======================================================
+page = st.sidebar.selectbox(
+    "Choose a page:",
+    ["🗺️ Wind Resource Map", "🎯 Optimal Zones Analysis"]
+)
+
+if page == "🗺️ Wind Resource Map":
+    st.title("🇮🇪 Irish Transmission Grid & Wind Resource Map")
+    
+    # Add quick access to optimal zones
+    st.sidebar.markdown("---")
+    st.sidebar.subheader("🎯 Quick Analysis")
+    if st.sidebar.button("🚀 Find Optimal Wind Farm Locations", type="primary"):
+        st.session_state.page = "🎯 Optimal Zones Analysis"
+        st.rerun()
+    
+elif page == "🎯 Optimal Zones Analysis":
+    render_optimal_zones_map()
+    st.stop()
 
 # ======================================================
 # 📂 PATHS

@@ -1,8 +1,24 @@
 # ============================================================
-# 🚀 AI-ASSISTED CODE NOTICE
-# This file was developed with assistance from OpenAI's ChatGPT (GPT-5)
-# as part of the NASA Space Apps 2025 project:
-# “TerraWatt — Will It Rain on My Parade?”
+# AI USE DECLARATION
+# ============================================================
+# This file was developed with significant assistance from AI tools:
+# 
+# 1. Cursor AI (https://cursor.sh/)
+#    - Primary development environment with AI-powered code completion
+#    - Real-time code suggestions and refactoring assistance
+#    - Integrated debugging and error resolution
+#
+# 2. ChatGPT (OpenAI - https://openai.com/chatgpt)
+#    - Conversational AI assistance for complex coding tasks
+#    - Strategic planning and architectural guidance
+#    - Code generation and debugging support
+#
+# Project: TerraWatt — Will It Rain on My Parade?
+# Challenge: NASA Space Apps 2025
+# 
+# All AI-generated code has been reviewed, tested, and validated
+# by the human development team. AI tools served as collaborative
+# partners in the development process.
 # ============================================================
 
 import os

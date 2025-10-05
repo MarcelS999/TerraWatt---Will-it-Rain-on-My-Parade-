@@ -1,0 +1,60 @@
+# ============================================================
+# Cursor Project Rules – TerraWatt (Will it Rain on My Parade)
+# ============================================================
+# This file helps Cursor understand your code structure and imports.
+
+project:
+  name: "Will it Rain on My Parade"
+  description: >
+    A Streamlit-based Irish wind resource and grid visualization tool.
+    Combines ERA5 reanalysis data with OSM transmission infrastructure
+    and site-level analysis utilities.
+
+structure:
+  - path: app.py
+    role: main_entrypoint
+    description: >
+      Main Streamlit dashboard. Loads transmission, wind, and ERA5 data.
+      Displays interactive map and runs site summary logic.
+
+  - path: src/analysis/
+    role: analytics
+    description: >
+      Contains wind speed analysis and site summary computations.
+      Includes `site_summary.py` and capacity factor modeling.
+
+  - path: src/processing/
+    role: preprocessing
+    description: >
+      Functions for extrapolating wind speed to hub height and merging ERA5 datasets.
+
+  - path: src/visualization/
+    role: visualization
+    description: >
+      Handles Folium layer generation and map rendering utilities.
+
+  - path: data/
+    role: data_assets
+    description: >
+      Static datasets: ERA5 rasters, OSM grid data, and wind farm shapefiles.
+
+python:
+  entry_point: "app.py"
+  default_environment: "parade"
+  import_roots:
+    - src
+    - src.analysis
+    - src.processing
+    - src.visualization
+
+rules:
+  - "Prefer relative imports within `src/`."
+  - "Use geopandas, rasterio, folium, and streamlit for all spatial & UI logic."
+  - "When editing app.py, preserve Streamlit layout styling and sidebar design."
+  - "When editing site_summary.py, avoid refactoring out the compute_cf_2019 logic."
+  - "Always use 'EPSG:4326' for coordinate reference systems."
+  - "Document any new functions with short docstrings (1–2 lines)."
+
+notes:
+  - "AI assistance was used for code structure and data integration."
+  - "Core logic and design by human participant during NASA Space Apps Hackathon."
